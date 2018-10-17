@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EscolaVruckModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Alunos">
+    <Key>
+      <PropertyRef Name="al_codigo" />
+    </Key>
+    <Property Name="al_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pes_codigo" Type="int" />
+    <Property Name="al_ra" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="classificacao">
+    <Key>
+      <PropertyRef Name="cla_codigo" />
+    </Key>
+    <Property Name="cla_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cla_nome" Type="varchar" MaxLength="150" />
+    <Property Name="cla_uf" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Cursos">
+    <Key>
+      <PropertyRef Name="cur_codigo" />
+    </Key>
+    <Property Name="cur_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cur_nome" Type="varchar" MaxLength="150" />
+    <Property Name="cur_valorDeCredito" Type="int" />
+    <Property Name="cur_sequencia" Type="int" />
+  </EntityType>
+  <EntityType Name="disciplina">
+    <Key>
+      <PropertyRef Name="dis_codigo" />
+    </Key>
+    <Property Name="dis_codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dis_nome" Type="varchar" MaxLength="150" />
+    <Property Name="dis_cargaHoraria" Type="int" />
+    <Property Name="dis_numeroCredito" Type="int" />
+    <Property Name="pro_codigo" Type="int" />
+    <Property Name="cur_codigo" Type="int" />
+  </EntityType>
+  <EntityType Name="List_Disciplina">
+    <Key>
+      <PropertyRef Name="list_codigo" />
+    </Key>
+    <Property Name="list_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="mat_codigo" Type="int" />
+    <Property Name="dis_codigo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="mat_codigo" />
+    </Key>
+    <Property Name="mat_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cur_codigo" Type="int" />
+    <Property Name="alu_codigo" Type="int" />
+    <Property Name="mat_termo" Type="varchar" MaxLength="50" />
+    <Property Name="mat_turma" Type="varchar" MaxLength="50" />
+    <Property Name="mat_ano" Type="int" />
+    <Property Name="mat_semestre" Type="varchar" MaxLength="50" />
+    <Property Name="mat_valor" Type="money" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pes_nome" Type="varchar" MaxLength="150" />
+    <Property Name="pes_rg" Type="varchar" MaxLength="150" />
+    <Property Name="pes_cpf" Type="varchar" MaxLength="150" />
+    <Property Name="pes_datnascimento" Type="int" />
+    <Property Name="pes_sexo" Type="varchar" MaxLength="2" />
+    <Property Name="pes_telefone" Type="varchar" MaxLength="150" />
+    <Property Name="pes_cidade" Type="varchar" MaxLength="150" />
+    <Property Name="pes_uf" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Professor">
+    <Key>
+      <PropertyRef Name="pro_codigo" />
+    </Key>
+    <Property Name="pro_codigo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="pes_codigo" Type="int" />
+    <Property Name="class_codigo" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EscolaVruck.dbo.vwListaDisciplina' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vwListaDisciplina">
+    <Key>
+      <PropertyRef Name="dis_codigo" />
+      <PropertyRef Name="cur_codigo" />
+    </Key>
+    <Property Name="dis_nome" Type="varchar" MaxLength="150" />
+    <Property Name="dis_codigo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="cur_nome" Type="varchar" MaxLength="150" />
+    <Property Name="cur_codigo" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EscolaVruck.dbo.VwMatricula' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwMatricula">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="al_codigo" />
+      <PropertyRef Name="cur_codigo" />
+      <PropertyRef Name="mat_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="int" Nullable="false" />
+    <Property Name="pes_nome" Type="varchar" MaxLength="150" />
+    <Property Name="al_codigo" Type="int" Nullable="false" />
+    <Property Name="cur_codigo" Type="int" Nullable="false" />
+    <Property Name="cur_nome" Type="varchar" MaxLength="150" />
+    <Property Name="mat_codigo" Type="int" Nullable="false" />
+    <Property Name="mat_termo" Type="varchar" MaxLength="50" />
+    <Property Name="mat_turma" Type="varchar" MaxLength="50" />
+    <Property Name="mat_ano" Type="date" />
+    <Property Name="mat_semestre" Type="varchar" MaxLength="50" />
+    <Property Name="mat_valor" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EscolaVruck.dbo.VwPessoasAlunos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwPessoasAlunos">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="al_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="int" Nullable="false" />
+    <Property Name="pes_nome" Type="varchar" MaxLength="150" />
+    <Property Name="pes_rg" Type="varchar" MaxLength="150" />
+    <Property Name="pes_sexo" Type="varchar" MaxLength="2" />
+    <Property Name="pes_datnascimento" Type="date" />
+    <Property Name="pes_cpf" Type="varchar" MaxLength="150" />
+    <Property Name="pes_telefone" Type="varchar" MaxLength="150" />
+    <Property Name="pes_cidade" Type="varchar" MaxLength="150" />
+    <Property Name="pes_uf" Type="varchar" MaxLength="3" />
+    <Property Name="al_codigo" Type="int" Nullable="false" />
+    <Property Name="al_ra" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EscolaVruck.dbo.VwPessoasAlunosProfessoresClassficacao' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwPessoasAlunosProfessoresClassficacao">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="pro_codigo" />
+      <PropertyRef Name="al_codigo" />
+      <PropertyRef Name="cla_codigo" />
+    </Key>
+    <Property Name="pes_nome" Type="varchar" MaxLength="150" />
+    <Property Name="pes_rg" Type="varchar" MaxLength="150" />
+    <Property Name="pes_codigo" Type="int" Nullable="false" />
+    <Property Name="pes_cpf" Type="varchar" MaxLength="150" />
+    <Property Name="pes_datnascimento" Type="date" />
+    <Property Name="pes_sexo" Type="varchar" MaxLength="2" />
+    <Property Name="pes_telefone" Type="varchar" MaxLength="150" />
+    <Property Name="pes_cidade" Type="varchar" MaxLength="150" />
+    <Property Name="pro_codigo" Type="int" Nullable="false" />
+    <Property Name="al_codigo" Type="int" Nullable="false" />
+    <Property Name="al_ra" Type="varchar" MaxLength="150" />
+    <Property Name="cla_codigo" Type="int" Nullable="false" />
+    <Property Name="cla_nome" Type="varchar" MaxLength="150" />
+    <Property Name="cla_uf" Type="varchar" MaxLength="3" />
+    <Property Name="Expr1" Type="int" />
+    <Property Name="class_codigo" Type="int" />
+    <Property Name="Expr2" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'EscolaVruck.dbo.VwPessoasProfessor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VwPessoasProfessor">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="pro_codigo" />
+      <PropertyRef Name="cla_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="int" Nullable="false" />
+    <Property Name="pes_nome" Type="varchar" MaxLength="150" />
+    <Property Name="pes_rg" Type="varchar" MaxLength="150" />
+    <Property Name="pes_cpf" Type="varchar" MaxLength="150" />
+    <Property Name="pes_sexo" Type="varchar" MaxLength="2" />
+    <Property Name="pes_datnascimento" Type="date" />
+    <Property Name="pes_cidade" Type="varchar" MaxLength="150" />
+    <Property Name="pes_telefone" Type="varchar" MaxLength="150" />
+    <Property Name="pes_uf" Type="varchar" MaxLength="3" />
+    <Property Name="pro_codigo" Type="int" Nullable="false" />
+    <Property Name="cla_codigo" Type="int" Nullable="false" />
+    <Property Name="cla_uf" Type="varchar" MaxLength="3" />
+    <Property Name="cla_nome" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <Association Name="FK_Alunos_Pessoa">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+    <End Role="Alunos" Type="Self.Alunos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="pes_codigo" />
+      </Principal>
+      <Dependent Role="Alunos">
+        <PropertyRef Name="pes_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_disciplina_Professor">
+    <End Role="Professor" Type="Self.Professor" Multiplicity="0..1" />
+    <End Role="disciplina" Type="Self.disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Professor">
+        <PropertyRef Name="pro_codigo" />
+      </Principal>
+      <Dependent Role="disciplina">
+        <PropertyRef Name="pro_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_List_Disciplina_disciplina1">
+    <End Role="disciplina" Type="Self.disciplina" Multiplicity="0..1" />
+    <End Role="List_Disciplina" Type="Self.List_Disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="disciplina">
+        <PropertyRef Name="dis_codigo" />
+      </Principal>
+      <Dependent Role="List_Disciplina">
+        <PropertyRef Name="dis_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_List_Disciplina_Matricula">
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="0..1" />
+    <End Role="List_Disciplina" Type="Self.List_Disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matricula">
+        <PropertyRef Name="mat_codigo" />
+      </Principal>
+      <Dependent Role="List_Disciplina">
+        <PropertyRef Name="mat_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matricula_Alunos">
+    <End Role="Alunos" Type="Self.Alunos" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alunos">
+        <PropertyRef Name="al_codigo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="alu_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matricula_Cursos">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="cur_codigo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="cur_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matricula_disciplina">
+    <End Role="disciplina" Type="Self.disciplina" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="disciplina">
+        <PropertyRef Name="dis_codigo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="mat_termo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professor_classificacao">
+    <End Role="classificacao" Type="Self.classificacao" Multiplicity="0..1" />
+    <End Role="Professor" Type="Self.Professor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classificacao">
+        <PropertyRef Name="cla_codigo" />
+      </Principal>
+      <Dependent Role="Professor">
+        <PropertyRef Name="class_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professor_Pessoa">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+    <End Role="Professor" Type="Self.Professor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="pes_codigo" />
+      </Principal>
+      <Dependent Role="Professor">
+        <PropertyRef Name="pes_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpCursoDisciplina" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SpMatriculaRelatorio" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="semestre" Type="int" Mode="In" />
+    <Parameter Name="date" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SpmatriculaTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="semestre" Type="int" Mode="In" />
+    <Parameter Name="date" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="EscolaVruckModelStoreContainer">
+    <EntitySet Name="Alunos" EntityType="Self.Alunos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="classificacao" EntityType="Self.classificacao" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cursos" EntityType="Self.Cursos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="disciplina" EntityType="Self.disciplina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="List_Disciplina" EntityType="Self.List_Disciplina" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Matricula" EntityType="Self.Matricula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pessoa" EntityType="Self.Pessoa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Professor" EntityType="Self.Professor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vwListaDisciplina" EntityType="Self.vwListaDisciplina" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[vwListaDisciplina].[dis_nome] AS [dis_nome], 
+[vwListaDisciplina].[dis_codigo] AS [dis_codigo], 
+[vwListaDisciplina].[cur_nome] AS [cur_nome], 
+[vwListaDisciplina].[cur_codigo] AS [cur_codigo]
+FROM [dbo].[vwListaDisciplina] AS [vwListaDisciplina]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwMatricula" EntityType="Self.VwMatricula" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VwMatricula].[pes_codigo] AS [pes_codigo], 
+[VwMatricula].[pes_nome] AS [pes_nome], 
+[VwMatricula].[al_codigo] AS [al_codigo], 
+[VwMatricula].[cur_codigo] AS [cur_codigo], 
+[VwMatricula].[cur_nome] AS [cur_nome], 
+[VwMatricula].[mat_codigo] AS [mat_codigo], 
+[VwMatricula].[mat_termo] AS [mat_termo], 
+[VwMatricula].[mat_turma] AS [mat_turma], 
+[VwMatricula].[mat_ano] AS [mat_ano], 
+[VwMatricula].[mat_semestre] AS [mat_semestre], 
+[VwMatricula].[mat_valor] AS [mat_valor]
+FROM [dbo].[VwMatricula] AS [VwMatricula]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwPessoasAlunos" EntityType="Self.VwPessoasAlunos" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VwPessoasAlunos].[pes_codigo] AS [pes_codigo], 
+[VwPessoasAlunos].[pes_nome] AS [pes_nome], 
+[VwPessoasAlunos].[pes_rg] AS [pes_rg], 
+[VwPessoasAlunos].[pes_sexo] AS [pes_sexo], 
+[VwPessoasAlunos].[pes_datnascimento] AS [pes_datnascimento], 
+[VwPessoasAlunos].[pes_cpf] AS [pes_cpf], 
+[VwPessoasAlunos].[pes_telefone] AS [pes_telefone], 
+[VwPessoasAlunos].[pes_cidade] AS [pes_cidade], 
+[VwPessoasAlunos].[pes_uf] AS [pes_uf], 
+[VwPessoasAlunos].[al_codigo] AS [al_codigo], 
+[VwPessoasAlunos].[al_ra] AS [al_ra]
+FROM [dbo].[VwPessoasAlunos] AS [VwPessoasAlunos]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwPessoasAlunosProfessoresClassficacao" EntityType="Self.VwPessoasAlunosProfessoresClassficacao" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VwPessoasAlunosProfessoresClassficacao].[pes_nome] AS [pes_nome], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_rg] AS [pes_rg], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_codigo] AS [pes_codigo], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_cpf] AS [pes_cpf], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_datnascimento] AS [pes_datnascimento], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_sexo] AS [pes_sexo], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_telefone] AS [pes_telefone], 
+[VwPessoasAlunosProfessoresClassficacao].[pes_cidade] AS [pes_cidade], 
+[VwPessoasAlunosProfessoresClassficacao].[pro_codigo] AS [pro_codigo], 
+[VwPessoasAlunosProfessoresClassficacao].[al_codigo] AS [al_codigo], 
+[VwPessoasAlunosProfessoresClassficacao].[al_ra] AS [al_ra], 
+[VwPessoasAlunosProfessoresClassficacao].[cla_codigo] AS [cla_codigo], 
+[VwPessoasAlunosProfessoresClassficacao].[cla_nome] AS [cla_nome], 
+[VwPessoasAlunosProfessoresClassficacao].[cla_uf] AS [cla_uf], 
+[VwPessoasAlunosProfessoresClassficacao].[Expr1] AS [Expr1], 
+[VwPessoasAlunosProfessoresClassficacao].[class_codigo] AS [class_codigo], 
+[VwPessoasAlunosProfessoresClassficacao].[Expr2] AS [Expr2]
+FROM [dbo].[VwPessoasAlunosProfessoresClassficacao] AS [VwPessoasAlunosProfessoresClassficacao]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="VwPessoasProfessor" EntityType="Self.VwPessoasProfessor" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[VwPessoasProfessor].[pes_codigo] AS [pes_codigo], 
+[VwPessoasProfessor].[pes_nome] AS [pes_nome], 
+[VwPessoasProfessor].[pes_rg] AS [pes_rg], 
+[VwPessoasProfessor].[pes_cpf] AS [pes_cpf], 
+[VwPessoasProfessor].[pes_sexo] AS [pes_sexo], 
+[VwPessoasProfessor].[pes_datnascimento] AS [pes_datnascimento], 
+[VwPessoasProfessor].[pes_cidade] AS [pes_cidade], 
+[VwPessoasProfessor].[pes_telefone] AS [pes_telefone], 
+[VwPessoasProfessor].[pes_uf] AS [pes_uf], 
+[VwPessoasProfessor].[pro_codigo] AS [pro_codigo], 
+[VwPessoasProfessor].[cla_codigo] AS [cla_codigo], 
+[VwPessoasProfessor].[cla_uf] AS [cla_uf], 
+[VwPessoasProfessor].[cla_nome] AS [cla_nome]
+FROM [dbo].[VwPessoasProfessor] AS [VwPessoasProfessor]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Alunos_Pessoa" Association="Self.FK_Alunos_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Alunos" EntitySet="Alunos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_disciplina_Professor" Association="Self.FK_disciplina_Professor">
+      <End Role="Professor" EntitySet="Professor" />
+      <End Role="disciplina" EntitySet="disciplina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_List_Disciplina_disciplina1" Association="Self.FK_List_Disciplina_disciplina1">
+      <End Role="disciplina" EntitySet="disciplina" />
+      <End Role="List_Disciplina" EntitySet="List_Disciplina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_List_Disciplina_Matricula" Association="Self.FK_List_Disciplina_Matricula">
+      <End Role="Matricula" EntitySet="Matricula" />
+      <End Role="List_Disciplina" EntitySet="List_Disciplina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matricula_Alunos" Association="Self.FK_Matricula_Alunos">
+      <End Role="Alunos" EntitySet="Alunos" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matricula_Cursos" Association="Self.FK_Matricula_Cursos">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matricula_disciplina" Association="Self.FK_Matricula_disciplina">
+      <End Role="disciplina" EntitySet="disciplina" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professor_classificacao" Association="Self.FK_Professor_classificacao">
+      <End Role="classificacao" EntitySet="classificacao" />
+      <End Role="Professor" EntitySet="Professor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professor_Pessoa" Association="Self.FK_Professor_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Professor" EntitySet="Professor" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

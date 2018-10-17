@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="55ba3c0180314bb9829090c86f54afd9" Name="Diagram1">
+        <EntityTypeShape EntityType="EscolaVruckModel.Alunos" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.classificacao" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.Cursos" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.disciplina" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.List_Disciplina" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.Matricula" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.Pessoa" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.Professor" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.vwListaDisciplina" Width="1.5" PointX="7.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.VwMatricula" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.VwPessoasAlunos" Width="1.5" PointX="0.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.VwPessoasAlunosProfessoresClassficacao" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EscolaVruckModel.VwPessoasProfessor" Width="1.5" PointX="2.75" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="EscolaVruckModel.FK_Alunos_Pessoa" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_Matricula_Alunos" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_Professor_classificacao" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_Matricula_Cursos" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_disciplina_Professor" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_List_Disciplina_disciplina1" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_Matricula_disciplina" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_List_Disciplina_Matricula" ManuallyRouted="false" />
+        <AssociationConnector Association="EscolaVruckModel.FK_Professor_Pessoa" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

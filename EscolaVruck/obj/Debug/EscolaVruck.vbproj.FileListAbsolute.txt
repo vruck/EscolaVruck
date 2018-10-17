@@ -1,0 +1,119 @@
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.exe.config
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.exe
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.pdb
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.xml
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\Business.dll
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.dll
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\EntityFramework.dll
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\Business.pdb
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\Business.xml
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.pdb
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.xml
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\bin\Debug\EntityFramework.xml
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.vbprojResolveAssemblyReference.cache
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Resources.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.vbproj.GenerateResource.Cache
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.exe
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.xml
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.pdb
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Form1.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadPessoas.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConPessoas.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConProfessor.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadCidade.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadProfessor.resources
+c:\users\gabriel\documents\visual studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConCidade.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.cadClassificacao.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConClassificacao.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadCursos.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadDisciplina.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConDisciplina.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadTurma.resources
+C:\Users\Gabriel\Documents\Visual Studio 2015\Projects\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConTurma.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.exe.config
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.exe
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.xml
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.pdb
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.exe
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.pdb
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.xml
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Business.dll
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.dll
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EntityFramework.dll
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Business.pdb
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Business.xml
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.pdb
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.xml
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EntityFramework.xml
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.vbprojResolveAssemblyReference.cache
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.cadClassificacao.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadCursos.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadDisciplina.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadPessoas.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadProfessor.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConClassificacao.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConCursos.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConDisciplina.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConPessoas.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConProfessor.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Form1.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Resources.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.vbproj.GenerateResource.Cache
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.exe.config
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.exe
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.xml
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.pdb
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.vbprojResolveAssemblyReference.cache
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.cadClassificacao.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadCursos.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadDisciplina.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadPessoas.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadProfessor.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConClassificacao.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConCursos.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConDisciplina.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConPessoas.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConProfessor.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Form1.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Resources.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.vbproj.GenerateResource.Cache
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.exe
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.pdb
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EscolaVruck.xml
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Business.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EntityFramework.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Business.pdb
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Business.xml
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.pdb
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\Dominioo.xml
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\EntityFramework.xml
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadAluno.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConAlunosvb.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadAluno.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConAlunosvb.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadMatricula.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConMatricula.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.CadMatricula.resources
+C:\Users\gabrielvruck\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.ConMatricula.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.FrmRelatorios.resources
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\FlashControlV71.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\bin\Debug\stdole.dll
+C:\Users\Gabriel\Desktop\EscolaVruck\EscolaVruck\obj\Debug\EscolaVruck.Inicial.resources

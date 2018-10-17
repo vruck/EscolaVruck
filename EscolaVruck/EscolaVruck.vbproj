@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CDCA4D4-5EB0-4C36-9C18-3EEC79AC5E82}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>EscolaVruck.My.MyApplication</StartupObject>
+    <RootNamespace>EscolaVruck</RootNamespace>
+    <AssemblyName>EscolaVruck</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>EscolaVruck.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>EscolaVruck.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CadAluno.Designer.vb">
+      <DependentUpon>CadAluno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadAluno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cadClassificacao.Designer.vb">
+      <DependentUpon>cadClassificacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cadClassificacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadCursos.Designer.vb">
+      <DependentUpon>CadCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadCursos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadDisciplina.Designer.vb">
+      <DependentUpon>CadDisciplina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadDisciplina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadMatricula.Designer.vb">
+      <DependentUpon>CadMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadPessoas.Designer.vb">
+      <DependentUpon>CadPessoas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadPessoas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadProfessor.Designer.vb">
+      <DependentUpon>CadProfessor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CadProfessor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConAlunosvb.Designer.vb">
+      <DependentUpon>ConAlunosvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConAlunosvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConClassificacao.Designer.vb">
+      <DependentUpon>ConClassificacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConClassificacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConCursos.Designer.vb">
+      <DependentUpon>ConCursos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConCursos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConDisciplina.Designer.vb">
+      <DependentUpon>ConDisciplina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConDisciplina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConMatricula.Designer.vb">
+      <DependentUpon>ConMatricula.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConMatricula.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConPessoas.Designer.vb">
+      <DependentUpon>ConPessoas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConPessoas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConProfessor.Designer.vb">
+      <DependentUpon>ConProfessor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ConProfessor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRelatorios.Designer.vb">
+      <DependentUpon>FrmRelatorios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRelatorios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicial.Designer.vb">
+      <DependentUpon>Inicial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Inicial.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\ListaDisciplinamodel.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Relatorio\RptDisciplinaECurso1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDisciplinaECurso.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RptMatriculaAlunos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptMatriculaAlunos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Relatorio\RptMatriculaTotal.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptMatriculaTotal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CadAluno.resx">
+      <DependentUpon>CadAluno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cadClassificacao.resx">
+      <DependentUpon>cadClassificacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadCursos.resx">
+      <DependentUpon>CadCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadDisciplina.resx">
+      <DependentUpon>CadDisciplina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadMatricula.resx">
+      <DependentUpon>CadMatricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadPessoas.resx">
+      <DependentUpon>CadPessoas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadProfessor.resx">
+      <DependentUpon>CadProfessor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConAlunosvb.resx">
+      <DependentUpon>ConAlunosvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConClassificacao.resx">
+      <DependentUpon>ConClassificacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConCursos.resx">
+      <DependentUpon>ConCursos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConDisciplina.resx">
+      <DependentUpon>ConDisciplina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConMatricula.resx">
+      <DependentUpon>ConMatricula.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConPessoas.resx">
+      <DependentUpon>ConPessoas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConProfessor.resx">
+      <DependentUpon>ConProfessor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRelatorios.resx">
+      <DependentUpon>FrmRelatorios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicial.resx">
+      <DependentUpon>Inicial.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RptDisciplinaECurso.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDisciplinaECurso1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RptMatriculaAlunos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptMatriculaAlunos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Relatorio\RptMatriculaTotal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptMatriculaTotal.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.vbproj">
+      <Project>{85e5c766-31de-48a5-b594-2a5e00c25f0c}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dominioo\Dominioo.vbproj">
+      <Project>{26cdc1e4-b830-44cd-88ca-c92b829db377}</Project>
+      <Name>Dominioo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

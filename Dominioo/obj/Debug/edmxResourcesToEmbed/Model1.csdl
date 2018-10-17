@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EscolaVruckModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Alunos">
+    <Key>
+      <PropertyRef Name="al_codigo" />
+    </Key>
+    <Property Name="al_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pes_codigo" Type="Int32" />
+    <Property Name="al_ra" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Pessoa" Relationship="Self.FK_Alunos_Pessoa" FromRole="Alunos" ToRole="Pessoa" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK_Matricula_Alunos" FromRole="Alunos" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="classificacao">
+    <Key>
+      <PropertyRef Name="cla_codigo" />
+    </Key>
+    <Property Name="cla_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cla_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cla_uf" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Professor" Relationship="Self.FK_Professor_classificacao" FromRole="classificacao" ToRole="Professor" />
+  </EntityType>
+  <EntityType Name="Cursos">
+    <Key>
+      <PropertyRef Name="cur_codigo" />
+    </Key>
+    <Property Name="cur_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cur_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cur_valorDeCredito" Type="Int32" />
+    <Property Name="cur_sequencia" Type="Int32" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK_Matricula_Cursos" FromRole="Cursos" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="disciplina">
+    <Key>
+      <PropertyRef Name="dis_codigo" />
+    </Key>
+    <Property Name="dis_codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="dis_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="dis_cargaHoraria" Type="Int32" />
+    <Property Name="dis_numeroCredito" Type="Int32" />
+    <Property Name="pro_codigo" Type="Int32" />
+    <Property Name="cur_codigo" Type="Int32" />
+    <NavigationProperty Name="Professor" Relationship="Self.FK_disciplina_Professor" FromRole="disciplina" ToRole="Professor" />
+    <NavigationProperty Name="List_Disciplina" Relationship="Self.FK_List_Disciplina_disciplina1" FromRole="disciplina" ToRole="List_Disciplina" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK_Matricula_disciplina" FromRole="disciplina" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="List_Disciplina">
+    <Key>
+      <PropertyRef Name="list_codigo" />
+    </Key>
+    <Property Name="list_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="mat_codigo" Type="Int32" />
+    <Property Name="dis_codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="disciplina" Relationship="Self.FK_List_Disciplina_disciplina1" FromRole="List_Disciplina" ToRole="disciplina" />
+    <NavigationProperty Name="Matricula" Relationship="Self.FK_List_Disciplina_Matricula" FromRole="List_Disciplina" ToRole="Matricula" />
+  </EntityType>
+  <EntityType Name="Matricula">
+    <Key>
+      <PropertyRef Name="mat_codigo" />
+    </Key>
+    <Property Name="mat_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cur_codigo" Type="Int32" />
+    <Property Name="alu_codigo" Type="Int32" />
+    <Property Name="mat_termo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mat_turma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mat_ano" Type="Int32" />
+    <Property Name="mat_semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mat_valor" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="Alunos" Relationship="Self.FK_Matricula_Alunos" FromRole="Matricula" ToRole="Alunos" />
+    <NavigationProperty Name="Cursos" Relationship="Self.FK_Matricula_Cursos" FromRole="Matricula" ToRole="Cursos" />
+    <NavigationProperty Name="disciplina" Relationship="Self.FK_Matricula_disciplina" FromRole="Matricula" ToRole="disciplina" />
+    <NavigationProperty Name="List_Disciplina" Relationship="Self.FK_List_Disciplina_Matricula" FromRole="Matricula" ToRole="List_Disciplina" />
+  </EntityType>
+  <EntityType Name="Pessoa">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pes_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_rg" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_cpf" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_datnascimento" Type="Int32" />
+    <Property Name="pes_sexo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="pes_telefone" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_cidade" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_uf" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Alunos" Relationship="Self.FK_Alunos_Pessoa" FromRole="Pessoa" ToRole="Alunos" />
+    <NavigationProperty Name="Professor" Relationship="Self.FK_Professor_Pessoa" FromRole="Pessoa" ToRole="Professor" />
+  </EntityType>
+  <EntityType Name="Professor">
+    <Key>
+      <PropertyRef Name="pro_codigo" />
+    </Key>
+    <Property Name="pro_codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="pes_codigo" Type="Int32" />
+    <Property Name="class_codigo" Type="Int32" />
+    <NavigationProperty Name="classificacao" Relationship="Self.FK_Professor_classificacao" FromRole="Professor" ToRole="classificacao" />
+    <NavigationProperty Name="disciplina" Relationship="Self.FK_disciplina_Professor" FromRole="Professor" ToRole="disciplina" />
+    <NavigationProperty Name="Pessoa" Relationship="Self.FK_Professor_Pessoa" FromRole="Professor" ToRole="Pessoa" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="vwListaDisciplina">
+    <Key>
+      <PropertyRef Name="dis_codigo" />
+      <PropertyRef Name="cur_codigo" />
+    </Key>
+    <Property Name="dis_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="dis_codigo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cur_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cur_codigo" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VwMatricula">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="al_codigo" />
+      <PropertyRef Name="cur_codigo" />
+      <PropertyRef Name="mat_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="Int32" Nullable="false" />
+    <Property Name="pes_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="al_codigo" Type="Int32" Nullable="false" />
+    <Property Name="cur_codigo" Type="Int32" Nullable="false" />
+    <Property Name="cur_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="mat_codigo" Type="Int32" Nullable="false" />
+    <Property Name="mat_termo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mat_turma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mat_ano" Type="DateTime" Precision="0" />
+    <Property Name="mat_semestre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mat_valor" Type="Decimal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="VwPessoasAlunos">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="al_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="Int32" Nullable="false" />
+    <Property Name="pes_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_rg" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_sexo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="pes_datnascimento" Type="DateTime" Precision="0" />
+    <Property Name="pes_cpf" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_telefone" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_cidade" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_uf" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="al_codigo" Type="Int32" Nullable="false" />
+    <Property Name="al_ra" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VwPessoasAlunosProfessoresClassficacao">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="pro_codigo" />
+      <PropertyRef Name="al_codigo" />
+      <PropertyRef Name="cla_codigo" />
+    </Key>
+    <Property Name="pes_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_rg" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_codigo" Type="Int32" Nullable="false" />
+    <Property Name="pes_cpf" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_datnascimento" Type="DateTime" Precision="0" />
+    <Property Name="pes_sexo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="pes_telefone" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_cidade" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pro_codigo" Type="Int32" Nullable="false" />
+    <Property Name="al_codigo" Type="Int32" Nullable="false" />
+    <Property Name="al_ra" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cla_codigo" Type="Int32" Nullable="false" />
+    <Property Name="cla_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="cla_uf" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Expr1" Type="Int32" />
+    <Property Name="class_codigo" Type="Int32" />
+    <Property Name="Expr2" Type="Int32" />
+  </EntityType>
+  <EntityType Name="VwPessoasProfessor">
+    <Key>
+      <PropertyRef Name="pes_codigo" />
+      <PropertyRef Name="pro_codigo" />
+      <PropertyRef Name="cla_codigo" />
+    </Key>
+    <Property Name="pes_codigo" Type="Int32" Nullable="false" />
+    <Property Name="pes_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_rg" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_cpf" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_sexo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="pes_datnascimento" Type="DateTime" Precision="0" />
+    <Property Name="pes_cidade" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_telefone" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="pes_uf" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="pro_codigo" Type="Int32" Nullable="false" />
+    <Property Name="cla_codigo" Type="Int32" Nullable="false" />
+    <Property Name="cla_uf" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="cla_nome" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_Alunos_Pessoa">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+    <End Role="Alunos" Type="Self.Alunos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="pes_codigo" />
+      </Principal>
+      <Dependent Role="Alunos">
+        <PropertyRef Name="pes_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matricula_Alunos">
+    <End Role="Alunos" Type="Self.Alunos" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Alunos">
+        <PropertyRef Name="al_codigo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="alu_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professor_classificacao">
+    <End Role="classificacao" Type="Self.classificacao" Multiplicity="0..1" />
+    <End Role="Professor" Type="Self.Professor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="classificacao">
+        <PropertyRef Name="cla_codigo" />
+      </Principal>
+      <Dependent Role="Professor">
+        <PropertyRef Name="class_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matricula_Cursos">
+    <End Role="Cursos" Type="Self.Cursos" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursos">
+        <PropertyRef Name="cur_codigo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="cur_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_disciplina_Professor">
+    <End Role="Professor" Type="Self.Professor" Multiplicity="0..1" />
+    <End Role="disciplina" Type="Self.disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Professor">
+        <PropertyRef Name="pro_codigo" />
+      </Principal>
+      <Dependent Role="disciplina">
+        <PropertyRef Name="pro_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_List_Disciplina_disciplina1">
+    <End Role="disciplina" Type="Self.disciplina" Multiplicity="0..1" />
+    <End Role="List_Disciplina" Type="Self.List_Disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="disciplina">
+        <PropertyRef Name="dis_codigo" />
+      </Principal>
+      <Dependent Role="List_Disciplina">
+        <PropertyRef Name="dis_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Matricula_disciplina">
+    <End Role="disciplina" Type="Self.disciplina" Multiplicity="0..1" />
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="disciplina">
+        <PropertyRef Name="dis_codigo" />
+      </Principal>
+      <Dependent Role="Matricula">
+        <PropertyRef Name="mat_termo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_List_Disciplina_Matricula">
+    <End Role="Matricula" Type="Self.Matricula" Multiplicity="0..1" />
+    <End Role="List_Disciplina" Type="Self.List_Disciplina" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matricula">
+        <PropertyRef Name="mat_codigo" />
+      </Principal>
+      <Dependent Role="List_Disciplina">
+        <PropertyRef Name="mat_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Professor_Pessoa">
+    <End Role="Pessoa" Type="Self.Pessoa" Multiplicity="0..1" />
+    <End Role="Professor" Type="Self.Professor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pessoa">
+        <PropertyRef Name="pes_codigo" />
+      </Principal>
+      <Dependent Role="Professor">
+        <PropertyRef Name="pes_codigo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EscolaVruckEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Alunos" EntityType="Self.Alunos" />
+    <EntitySet Name="classificacao" EntityType="Self.classificacao" />
+    <EntitySet Name="Cursos" EntityType="Self.Cursos" />
+    <EntitySet Name="disciplina" EntityType="Self.disciplina" />
+    <EntitySet Name="List_Disciplina" EntityType="Self.List_Disciplina" />
+    <EntitySet Name="Matricula" EntityType="Self.Matricula" />
+    <EntitySet Name="Pessoa" EntityType="Self.Pessoa" />
+    <EntitySet Name="Professor" EntityType="Self.Professor" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="vwListaDisciplina" EntityType="Self.vwListaDisciplina" />
+    <EntitySet Name="VwMatricula" EntityType="Self.VwMatricula" />
+    <EntitySet Name="VwPessoasAlunos" EntityType="Self.VwPessoasAlunos" />
+    <EntitySet Name="VwPessoasAlunosProfessoresClassficacao" EntityType="Self.VwPessoasAlunosProfessoresClassficacao" />
+    <EntitySet Name="VwPessoasProfessor" EntityType="Self.VwPessoasProfessor" />
+    <AssociationSet Name="FK_Alunos_Pessoa" Association="Self.FK_Alunos_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Alunos" EntitySet="Alunos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matricula_Alunos" Association="Self.FK_Matricula_Alunos">
+      <End Role="Alunos" EntitySet="Alunos" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professor_classificacao" Association="Self.FK_Professor_classificacao">
+      <End Role="classificacao" EntitySet="classificacao" />
+      <End Role="Professor" EntitySet="Professor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matricula_Cursos" Association="Self.FK_Matricula_Cursos">
+      <End Role="Cursos" EntitySet="Cursos" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_disciplina_Professor" Association="Self.FK_disciplina_Professor">
+      <End Role="Professor" EntitySet="Professor" />
+      <End Role="disciplina" EntitySet="disciplina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_List_Disciplina_disciplina1" Association="Self.FK_List_Disciplina_disciplina1">
+      <End Role="disciplina" EntitySet="disciplina" />
+      <End Role="List_Disciplina" EntitySet="List_Disciplina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Matricula_disciplina" Association="Self.FK_Matricula_disciplina">
+      <End Role="disciplina" EntitySet="disciplina" />
+      <End Role="Matricula" EntitySet="Matricula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_List_Disciplina_Matricula" Association="Self.FK_List_Disciplina_Matricula">
+      <End Role="Matricula" EntitySet="Matricula" />
+      <End Role="List_Disciplina" EntitySet="List_Disciplina" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Professor_Pessoa" Association="Self.FK_Professor_Pessoa">
+      <End Role="Pessoa" EntitySet="Pessoa" />
+      <End Role="Professor" EntitySet="Professor" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EscolaVruckModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EscolaVruckModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SpCursoDisciplina" ReturnType="Collection(EscolaVruckModel.SpCursoDisciplina_Result)" />
+    <FunctionImport Name="SpMatriculaRelatorio" ReturnType="Collection(EscolaVruckModel.SpMatriculaRelatorio_Result)">
+      <Parameter Name="semestre" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SpmatriculaTotal" ReturnType="Collection(EscolaVruckModel.SpmatriculaTotal_Result)">
+      <Parameter Name="semestre" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SpCursoDisciplina_Result">
+    <Property Type="Int32" Name="pro_codigo" Nullable="false" />
+    <Property Type="String" Name="pes_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="dis_codigo" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="dis_nome" Nullable="true" MaxLength="150" />
+    <Property Type="Int32" Name="cur_codigo" Nullable="false" />
+    <Property Type="String" Name="cur_nome" Nullable="true" MaxLength="150" />
+  </ComplexType>
+  <ComplexType Name="SpMatriculaRelatorio_Result">
+    <Property Type="Int32" Name="list_codigo" Nullable="false" />
+    <Property Type="Int32" Name="alu_codigo" Nullable="true" />
+    <Property Type="String" Name="pes_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="cur_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="dis_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="mat_semestre" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="mat_turma" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="mat_ano" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="SpmatriculaTotal_Result">
+    <Property Type="Int32" Name="list_codigo" Nullable="false" />
+    <Property Type="Int32" Name="alu_codigo" Nullable="true" />
+    <Property Type="String" Name="pes_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="cur_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="dis_nome" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="mat_semestre" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="mat_turma" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="mat_termo" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="mat_ano" Nullable="true" />
+  </ComplexType>
+</Schema>
